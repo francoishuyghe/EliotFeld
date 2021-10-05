@@ -8,9 +8,9 @@
       "./scripts/customizer.js"
     ]
   },
-  "publicPath": "/app/themes/sage",
+  "publicPath": "/app/themes/eliotfeld-2021",
   "devUrl": "http://eliotfeld.ballettech.test",
-  "proxyUrl": "http://localhost:3000",
+  "proxyUrl": "http://localhost:3001",
   "cacheBusting": "[name]_[hash:8]",
   "watch": [
     "app/**/*.php",

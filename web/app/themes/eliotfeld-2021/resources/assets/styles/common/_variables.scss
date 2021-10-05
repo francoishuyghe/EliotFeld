@@ -1,8 +1,13 @@
 /** Import Bootstrap functions */
 @import "~bootstrap/scss/functions";
 
+$grid-gutter: 50px;
+
 $theme-colors: (
-  primary: #525ddc
+  primary: #525ddc,
+  black: #000000,
+  white: #ffffff,
+  grey: #cccccc
 );
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
