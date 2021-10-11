@@ -11,9 +11,9 @@
     <p>This ballet is @if($general_info['running_time']) in @else <b>not in</b> @endif the public domain.</p>
 
     <h2>Key People</h2>
-    @if($data['lighting_designer'])<p>Lighting Designer: {{ $data['lighting_designer']['title'] }}</p>@endif
-    @if($data['costume_designer'])<p>Costume Designer: {{ $data['costume_designer']['title'] }}</p>@endif
-    @if($data['set_designer'])<p>Set Designer: {{ $data['set_designer']['title'] }}</p>@endif
+    @if($data['lighting_designer'])<p>Lighting Designer: {{ $data['lighting_designer']->post_title }}</p>@endif
+    @if($data['costume_designer'])<p>Costume Designer: {{ $data['costume_designer']->post_title }}</p>@endif
+    @if($data['set_designer'])<p>Set Designer: {{ $data['set_designer']->post_title }}</p>@endif
 
     <h2>Premiere</h2>
     @php $premiere = $data['premiere'] @endphp
@@ -23,7 +23,7 @@
     @if( $premiere['cast'])
     <ul>
       @foreach ($premiere['cast'] as $castMember)
-      <li>{{ $castMember['title'] }}</li>
+      <li>{{ $castMember->post_title }}</li>
       @endforeach
     </ul>
     @endif
@@ -35,7 +35,7 @@
     
     <h2>Music</h2>
     @php $music = $data['music'] @endphp
-    @if( $music['composer'])<p>Composer: {{ $music['composer']['title'] }}</p> @endif
+    @if( $music['composer'])<p>Composer: {{ $music['composer']->post_title }}</p> @endif
     @if( $music['composition'])<p>Composition: {{ $music['composition'] }}</p> @endif
     @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
     
