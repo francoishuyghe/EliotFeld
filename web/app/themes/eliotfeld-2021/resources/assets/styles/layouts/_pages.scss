@@ -1,0 +1,39 @@
+.page.ballets{
+    #balletsHeader{
+        position: sticky;
+        text-transform: uppercase;
+        color: theme-color(beige);
+
+        .sort{
+            cursor: pointer;
+        }
+    }
+
+    .ballet{
+        padding: $grid-gutter / 2 0 10px;
+        border-bottom: 1px solid theme-color(black);
+        align-items: flex-end;
+
+        &:last-child{
+            border-bottom: 0;
+            margin-bottom: $grid-gutter;
+        }
+
+        .ballet-name{
+            font-size: 2em;
+
+            a{
+                color: theme-color(black);
+            }
+        }
+    }
+}
+
+.toggle{
+    &.down:after{
+        content: '▼';
+    }
+    &.up:after{
+        content: '▲';
+    }
+}

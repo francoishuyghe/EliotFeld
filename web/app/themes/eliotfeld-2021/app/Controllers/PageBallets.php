@@ -11,6 +11,8 @@ class PageBallets extends Controller
         $args = array(
             'post_type' => 'ballet',
 	    	'posts_per_page' => -1,
+            'orderby' =>  'name',
+            'order' => 'ASC'
 	    );
 
 	    $the_query = new WP_Query( $args );
