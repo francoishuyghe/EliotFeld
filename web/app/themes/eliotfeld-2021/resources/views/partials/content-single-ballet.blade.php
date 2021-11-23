@@ -38,7 +38,10 @@
     {!! $data['notes'] !!}
     @endif
 
-    <p>This ballet is @if($general_info['running_time']) in @else <b>not in</b> @endif the public domain.</p>
+    @if(in_category('cat-2'))
+    <p>The choreography for {!! get_the_title() !!} is in the public domain. 
+      If you are interested in viewing the full length video, either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request. </p>
+      <p>Please note that there are third party rights to be cleared before any public staging of the ballet.</p>
     
     <h2>Media</h2>
     @php $media = $data['media'] @endphp
@@ -60,6 +63,7 @@
         </div>
       @endforeach
     </div>
+    @endif
     @endif
   </div>
 

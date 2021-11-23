@@ -1,10 +1,8 @@
 <div class="container"> 
-    <header id="balletsHeader">
-        <div class="row">
+    <header id="balletsHeader" class="row">
             <div class="sort header-name col">Ballets <span class="toggle down"></span></div>
             <div class="sort header-year col-md-1">Year <span class="toggle down"></span></div>
             <div class="sort header-composer col-md-2">Composer <span class="toggle down"></span></div>
-        </div>
     </header>
     @foreach ($ballets as $ballet)
         <div class="ballet row">

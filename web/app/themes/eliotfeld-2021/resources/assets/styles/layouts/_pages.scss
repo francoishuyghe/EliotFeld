@@ -1,6 +1,10 @@
 .page.ballets{
     #balletsHeader{
         position: sticky;
+        top: 0;
+        background: theme-color(white);
+        z-index: 3;
+        padding: $grid-gutter / 2;
         text-transform: uppercase;
         color: theme-color(beige);
 
