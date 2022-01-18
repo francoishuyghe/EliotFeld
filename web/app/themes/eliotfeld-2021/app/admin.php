@@ -29,7 +29,7 @@ function modified_column_register( $columns ) {
   
     return $columns;
 }
-add_filter( 'manage_edit-post_columns', 'modified_column_register' );
+add_filter( 'manage_edit-ballet_columns', __NAMESPACE__ . '\\modified_column_register' );
  
 // Display the column content
 function modified_column_display( $column_name, $post_id ) {
@@ -37,7 +37,7 @@ function modified_column_display( $column_name, $post_id ) {
         return;
     echo the_modified_date();
 }
-add_action( 'manage_posts_custom_column', 'modified_column_display', 10, 2 );
+add_action( 'manage_ballet_posts_custom_column', __NAMESPACE__ . '\\modified_column_display', 10, 2 );
  
 // Register the column as sortable
 function modified_column_register_sortable( $columns ) {
@@ -45,4 +45,4 @@ function modified_column_register_sortable( $columns ) {
   
     return $columns;
 }
-add_filter( 'manage_edit-post_sortable_columns', 'modified_column_register_sortable' );
+add_filter( 'manage_edit-ballet_sortable_columns', __NAMESPACE__ . '\\modified_column_register_sortable' );
