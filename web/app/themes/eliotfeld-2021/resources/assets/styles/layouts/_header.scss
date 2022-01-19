@@ -1,9 +1,8 @@
 .banner{
-  background: theme-color(grey);
 
   .container{
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     padding: $grid-gutter / 3 0;
   }
@@ -15,6 +14,8 @@
     
     a {
       @extend .nav-link;
+      color: theme-color(black);
+      text-transform: uppercase;
     }
   }
 }

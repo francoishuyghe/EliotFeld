@@ -1,0 +1,76 @@
+.single-ballet{
+    article{
+        padding-top: $grid-gutter;
+    }
+
+    h2{
+        font-size: 1em;
+        text-transform: uppercase;
+        text-decoration: underline;
+        font-weight: 400;
+    }
+
+    h3{
+        font-size: 1em;
+        font-weight: 600;
+        margin-bottom: 0;
+    }
+
+    p{
+        line-height: 1.3em;
+        margin-bottom: 10px;
+    }
+
+    .back-button{
+        color: theme-color(black);
+        text-transform: uppercase;
+        letter-spacing: .03em;
+
+        &:hover{
+            text-decoration: none;
+            &:before{
+                transform: translateX(-10px);
+            }
+        }
+
+        &:before{
+            content: "";
+            display: inline-block;
+            margin-right: 1em;
+            width: 0; 
+            height: 0; 
+            border-top: .4em solid transparent;
+            border-bottom: .4em solid transparent; 
+            border-right:.6em solid theme-color(black); 
+            transition: .25s;
+        }
+    }
+
+    section{
+        margin-bottom: $grid-gutter / 2;
+    }
+
+    #balletHeader{
+        display: flex;
+        align-items: flex-end;
+        border-bottom: 1px solid theme-color(black);
+        padding: 10px 0;
+        margin-bottom: $grid-gutter / 2;
+
+        h1{
+            flex: 1;
+        }
+
+        .year{
+            padding-right: $grid-gutter
+        }
+    }
+
+    #premiereSection{
+        .cast-list{
+            padding-left: 0;
+            list-style: none;
+            columns: 2;
+        }
+    }
+}

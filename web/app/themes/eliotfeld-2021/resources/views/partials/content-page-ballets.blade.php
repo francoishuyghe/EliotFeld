@@ -19,8 +19,8 @@
             </div>
             <div class="ballet-composer col-md-2">
                 @php $music = get_field('music', $ballet->ID) @endphp
-                @if($music)
-                {{ $music['composer'] }}
+                @if($music['composer'])
+                {{ $music['composer']->post_title }}
                 @endif
             </div>
         </div>
