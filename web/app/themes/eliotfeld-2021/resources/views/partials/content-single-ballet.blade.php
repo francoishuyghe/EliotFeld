@@ -26,7 +26,8 @@
     <section id="musicSection">
       <h2>Music</h2>
       @if( $music['composer'])<h3>Composer</h3><p>{{ $music['composer']->post_title }}</p> @endif
-      @if( $music['music_notes']) {!! $music['music_notes'] !!} @endif
+      @if( $music['music_notes'])<h3>Composition</h3> {!! $music['composition'] !!} @endif
+      @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
     </section>
 
     <section id="premiereSection">
