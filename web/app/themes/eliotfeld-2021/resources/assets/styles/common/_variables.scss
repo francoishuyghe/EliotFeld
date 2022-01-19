@@ -14,3 +14,21 @@ $theme-colors: (
 /** Bootstrap navbar fix (https://git.io/fADqW) */
 $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
+
+@font-face {
+  font-family: 'Graphik-Regular';
+  src: url('../fonts/Graphik-Regular.woff2') format('woff2'),
+      url('../fonts/Graphik-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CardinalFruit';
+  src: url('../fonts/CardinalFruit-Medium.woff2') format('woff2'),
+      url('../fonts/CardinalFruit-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

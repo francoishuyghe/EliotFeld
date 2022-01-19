@@ -16,7 +16,7 @@
     .ballet{
         padding: $grid-gutter / 2 0 10px;
         border-bottom: 1px solid theme-color(black);
-        align-items: flex-end;
+        align-items: center;
 
         &:last-child{
             border-bottom: 0;
