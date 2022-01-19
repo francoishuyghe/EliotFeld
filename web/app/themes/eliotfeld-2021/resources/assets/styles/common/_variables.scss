@@ -17,10 +17,18 @@ $navbar-dark-toggler-icon-bg: none;
 $navbar-light-toggler-icon-bg: none;
 
 @font-face {
-  font-family: 'Graphik-Regular';
-  src: url('../fonts/Graphik-Regular.woff2') format('woff2'),
-      url('../fonts/Graphik-Regular.woff') format('woff');
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Light.woff2') format('woff2'),
+      url('../fonts/Inter-Light.woff') format('woff');
   font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('../fonts/Inter-Medium.woff2') format('woff2'),
+      url('../fonts/Inter-Medium.woff') format('woff');
+  font-weight: bold;
   font-style: normal;
   font-display: swap;
 }

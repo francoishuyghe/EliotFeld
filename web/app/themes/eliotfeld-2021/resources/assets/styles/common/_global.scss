@@ -3,7 +3,8 @@ body{
     display: flex;
     flex-flow: column;
     background-color: theme-color(lightpink);
-    font-family: 'Graphik-Regular', sans-serif;
+    font-weight: 300;
+    font-family: 'Inter', 'CardinalFruit', sans-serif;
 
     .wrap{
         flex: 1;

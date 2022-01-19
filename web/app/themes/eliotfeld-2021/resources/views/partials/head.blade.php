@@ -5,4 +5,8 @@
   @php wp_head() @endphp
 
   <script src="https://kit.fontawesome.com/dd9a0b055a.js" crossorigin="anonymous"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
 </head>
