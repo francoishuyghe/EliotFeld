@@ -1,4 +1,15 @@
 .banner{
+  font-family: 'CardinalFruit', serif;
+  text-transform: uppercase;
+  font-size: 1.7em;
+
+  a{
+    color: theme-color(black);
+  }
+
+  a.brand{
+    margin-right: $grid-gutter / 2;
+  }
 
   .container{
     display: flex;
@@ -14,8 +25,6 @@
     
     a {
       @extend .nav-link;
-      color: theme-color(black);
-      text-transform: uppercase;
     }
   }
 }
