@@ -25,7 +25,7 @@ add_action('customize_preview_init', function () {
 
 // Register the column
 function modified_column_register( $columns ) {
-    $columns['modified_list'] = __( 'Modified', 'my-plugin' );
+    $columns['modified_list'] = __( 'Modified', 'Sage' );
   
     return $columns;
 }
@@ -46,3 +46,25 @@ function modified_column_register_sortable( $columns ) {
     return $columns;
 }
 add_filter( 'manage_edit-ballet_sortable_columns', __NAMESPACE__ . '\\modified_column_register_sortable' );
+
+// Sorting function
+function ballets_orderby_custom_column( $query ) {
+    global $pagenow;
+
+    if ( ! is_admin() || 'edit.php' != $pagenow || ! $query->is_main_query() || 'ballet' != $query->get( 'post_type' ) )  {
+        return;
+    }
+
+    $orderby = $query->get( 'orderby' );
+
+    switch ( $orderby ) {
+        case 'modified_list':
+            $query->set( 'orderby', 'modified' );
+            break;
+
+        default:
+            break;
+    }
+
+}
+add_action( 'pre_get_posts', __NAMESPACE__ . '\\ballets_orderby_custom_column' );
