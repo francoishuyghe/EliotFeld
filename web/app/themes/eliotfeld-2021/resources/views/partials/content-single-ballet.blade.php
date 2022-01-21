@@ -33,9 +33,9 @@
     <section id="premiereSection">
       <h2>Premiere</h2>
       <p>
-        @if( $premiere['date']){{ $premiere['date'] }}<br/> @endif
-        @if( $premiere['location']){{ $premiere['location'] }}<br/> @endif
-        @if( $premiere['company']){{ $premiere['company'] }} @endif
+        @if( $premiere['date'])<h3>Date</h3>{{ $premiere['date'] }}<br/> @endif
+        @if( $premiere['location'])<h3>Location</h3>{{ $premiere['location'] }}<br/> @endif
+        @if( $premiere['company'])<h3>Company</h3>{{ $premiere['company'] }} @endif
       </p>
       
       @if( $premiere['cast'])
