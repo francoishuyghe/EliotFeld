@@ -1,3 +1,27 @@
+.page.home{
+    background-color: theme-color(green);
+
+    h1{
+        color: theme-color(white);
+        font-size: 200px;
+        text-align: center;
+    }
+
+    .wrap{
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    header a{
+        color: theme-color(white);
+
+        &.brand{
+            display: none;
+        }
+    }
+}
+
 .page.ballets{
     #balletsHeader{
         position: sticky;

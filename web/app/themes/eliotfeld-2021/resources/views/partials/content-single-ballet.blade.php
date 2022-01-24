@@ -40,7 +40,7 @@
       
       @if( $premiere['cast'])
       <h3>Premiere Cast</h3>
-      <ul class="cast-list">
+      <ul id="castList" @if (count($premiere['cast']) > 9)class="columned"@endif>
         @foreach ($premiere['cast'] as $castMember)
         <li>{{ $castMember->post_title }}</li>
         @endforeach
@@ -56,9 +56,11 @@
     @endif
 
     @if(in_category('cat-2'))
-    <p>The choreography for {!! get_the_title() !!} is in the public domain. 
-      If you are interested in viewing the full length video, either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request. </p>
-      <p>Please note that there are third party rights to be cleared before any public staging of the ballet.</p>
+    <div class="public-domain">
+        <h3><i class="fal fa-info-circle"></i> Copyright Notice</h3>
+        <p>The choreography for {!! get_the_title() !!} is in the public domain. If you are interested in viewing the full length video, either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request. </p>
+        <p>Please note that there are third party rights to be cleared before any public staging of the ballet.</p>
+    </div>
   </div>
 </div>
 
