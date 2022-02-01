@@ -4,14 +4,17 @@
 
 <article @php post_class() @endphp>
   <div class="container">
+  <div class="row">
+
     <div class="col-12">
     <a class="back-button" href="/ballets">Back to ballets</a>
-  <header id="balletHeader">
-    <h1 class="entry-title">{!! get_the_title() !!}</h1>
-    <div class="year">{{ $general_info['year'] }}</div>
-    @if($music['composer'])<div class="composer">{{ $music['composer']->post_title }}</div>@endif
-  </header>
-    </div>
+    <header id="balletHeader">
+      <h1 class="entry-title">{!! get_the_title() !!}</h1>
+      <div class="year">{{ $general_info['year'] }}</div>
+      @if($music['composer'])<div class="composer">{{ $music['composer']->post_title }}</div>@endif
+    </header>
+  </div>
+
   <div class="col-md-6">
   <div class="entry-content">
     <section id="generalSection">
@@ -29,7 +32,10 @@
       @if( $music['music_notes'])<h3>Composition</h3> {!! $music['composition'] !!} @endif
       @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
     </section>
+  </div>
+</div>
 
+  <div class="col-md-6">
     <section id="premiereSection">
       <h2>Premiere</h2>
       <p>
@@ -54,15 +60,16 @@
       {!! $data['notes'] !!}
     </section>
     @endif
+</div>
+</div>
 
-    @if(in_category('cat-2'))
+@if(in_category('cat-2'))
     <div class="public-domain">
         <h3><i class="fal fa-info-circle"></i> Copyright Notice</h3>
         <p>The choreography for {!! get_the_title() !!} is in the public domain. If you are interested in viewing the full length video, either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request. </p>
         <p>Please note that there are third party rights to be cleared before any public staging of the ballet.</p>
     </div>
-  </div>
-</div>
+    @endif
 
 @php $media = $data['media'] @endphp
 @if( $media['photos'] || $media['videos'])
@@ -83,15 +90,14 @@
     <div class="row">
       @foreach ($media['videos'] as $video)
         <div class="col-md-6">
-            {!! $video !!}
+            {!! $video['video'] !!}
         </div>
       @endforeach
     </div>
     @endif
-    @endif
 
-  <footer>
     
-  </footer>
+    
+  
   </div>
 </article>
