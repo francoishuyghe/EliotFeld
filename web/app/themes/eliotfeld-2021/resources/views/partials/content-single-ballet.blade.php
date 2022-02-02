@@ -15,7 +15,7 @@
     </header>
   </div>
 
-  <div class="col-md-6">
+  <div class="col-md-4">
   <div class="entry-content">
     <section id="generalSection">
       <p><h3>Choreographer</h3><p>Eliot Feld</p>
@@ -35,7 +35,7 @@
   </div>
 </div>
 
-  <div class="col-md-6">
+  <div class="col-md-4">
     <section id="premiereSection">
       <h2>Premiere</h2>
       <p>
