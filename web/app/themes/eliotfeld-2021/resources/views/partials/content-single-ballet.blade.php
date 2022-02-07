@@ -11,7 +11,6 @@
     <header id="balletHeader">
       <h1 class="entry-title">{!! get_the_title() !!}</h1>
       <div class="year">{{ $general_info['year'] }}</div>
-      @if($music['composer'])<div class="composer">{{ $music['composer']->post_title }}</div>@endif
     </header>
   </div>
 
