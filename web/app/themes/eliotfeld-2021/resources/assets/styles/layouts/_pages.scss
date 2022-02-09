@@ -1,10 +1,14 @@
 .page.home{
     background-color: theme-color(green);
+    height: 100vh;
+    overflow: hidden;
 
     h1{
         color: theme-color(white);
-        font-size: 200px;
+        font-size: 300px;
         text-align: center;
+        margin-bottom: 0;
+        line-height: .65em;
     }
 
     .wrap{
@@ -19,6 +23,19 @@
         &.brand{
             display: none;
         }
+    }
+
+    img.eliot-cutout{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        z-index: -1;
+        transform: translate(-50%, 10px);
+        max-height: 90vh;
+    }
+
+    footer.content-info{
+        padding: 0;
     }
 }
 
