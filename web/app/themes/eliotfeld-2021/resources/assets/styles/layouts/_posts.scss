@@ -59,10 +59,8 @@
 
         h1{
             flex: 1;
-        }
-
-        .year{
-            padding-right: $grid-gutter
+            margin: $grid-gutter / 2 0 0;
+            line-height: .8em;
         }
     }
 

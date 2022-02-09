@@ -23,7 +23,16 @@
       @if($data['set_designer'])<h3>Set Designer</h3><p>{{ $data['set_designer']->post_title }}</p>@endif
       @if( $general_info['running_time']) <h3>Running Time</h3><p>{{ $general_info['running_time'] }} min</p> @endif
     </section>
+  </div>
+  @if($data['notes'])
+  <section id="notesSection">
+    <h2>Credits & Notes</h2>
+    {!! $data['notes'] !!}
+  </section>
+  @endif
+</div>
 
+  <div class="col-md-4">
     {{-- MUSIC --}}
     <section id="musicSection">
       <h2>Music</h2>
@@ -32,7 +41,6 @@
       @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
     </section>
   </div>
-</div>
 
   <div class="col-md-4">
     <section id="premiereSection">
@@ -52,13 +60,6 @@
       </ul>
       @endif
     </section>
-    
-    @if($data['notes'])
-    <section id="notesSection">
-      <h2>Credits & Notes</h2>
-      {!! $data['notes'] !!}
-    </section>
-    @endif
 </div>
 </div>
 

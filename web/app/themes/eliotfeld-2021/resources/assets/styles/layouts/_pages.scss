@@ -39,6 +39,20 @@
     }
 }
 
+.page.biography{
+    h1{
+        font-size: 5em;
+        margin-top: $grid-gutter * 2;
+    }
+
+    .main > div > p{
+        margin: $grid-gutter / 3 auto $grid-gutter * 2;
+        max-width: 700px;
+        font-size: 1.2em;
+        line-height: 1.2em;
+    }
+}
+
 .page.ballets{
     #balletsHeader{
         position: sticky;
