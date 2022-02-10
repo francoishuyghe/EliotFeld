@@ -42,18 +42,31 @@
 .page.biography{
     h1{
         font-size: 5em;
-        margin-top: $grid-gutter * 2;
+        margin-top: $grid-gutter;
+        
+        @include media-breakpoint-up(md){
+            margin-top: $grid-gutter * 2;
+        }
     }
-
+    
     .main > div > p{
-        margin: $grid-gutter / 3 auto $grid-gutter * 2;
+        margin: $grid-gutter / 3 auto $grid-gutter;
         max-width: 700px;
         font-size: 1.2em;
         line-height: 1.2em;
+        
+        @include media-breakpoint-up(md){
+            margin: $grid-gutter / 3 auto $grid-gutter * 2;
+        }
     }
 }
 
 .page.ballets{
+    #balletsTable{
+        font: inherit;
+        background: transparent;
+    }
+    
     #balletsHeader{
         position: sticky;
         top: 0;
@@ -61,16 +74,33 @@
         z-index: 3;
         padding: $grid-gutter / 2 0;
         text-transform: uppercase;
+        
+        th{
+            background: transparent;
+        }
 
         .sort{
             cursor: pointer;
+            white-space: nowrap;
+        }
+
+        @include media-breakpoint-down(md){
+            .header-year,
+            .header-composer,
+            .header-copyright{
+                display: none;
+            }
         }
     }
 
     .ballet{
-        padding: 10px 0;
-        border-bottom: 1px solid theme-color(black);
         align-items: center;
+        
+        td{
+            padding: 10px 0;
+            border-bottom: 1px solid theme-color(black);
+            background: transparent;
+        }
 
         &:hover{
             background-color: darken(theme-color(lightpink), 2);
@@ -89,6 +119,14 @@
                 color: theme-color(black);
             }
         }
+
+        @include media-breakpoint-down(md){
+            .ballet-year,
+            .ballet-composer,
+            .ballet-copyright{
+                display: none;
+            }
+        }
     }
 }
 
@@ -100,3 +138,52 @@
         content: '▲';
     }
 }
+
+/* REQUIRED CSS: change your reflow breakpoint here (35em below) */
+@media ( max-width: 35em ) {
+
+    /* uncomment out the line below if you don't want the sortable headers to show */
+    /* table.ui-table-reflow thead { display: none; } */
+  
+    /* css for reflow & reflow2 widgets */
+    .ui-table-reflow td,
+    .ui-table-reflow th {
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      float: right;
+      /* if not using the stickyHeaders widget (not the css3 version)
+       * the "!important" flag, and "height: auto" can be removed */
+      width: 100% !important;
+      height: auto !important;
+    }
+  
+    /* reflow widget only */
+    .ui-table-reflow tbody td[data-title]:before {
+      color: #469;
+      font-size: .9em;
+      content: attr(data-title);
+      float: left;
+      width: 50%;
+      white-space: pre-wrap;
+      text-align: bottom;
+      display: inline-block;
+    }
+  
+    /* reflow2 widget only */
+    table.ui-table-reflow .ui-table-cell-label.ui-table-cell-label-top {
+      display: block;
+      padding: .4em 0;
+      margin: .4em 0;
+      text-transform: uppercase;
+      font-size: .9em;
+      font-weight: 400;
+    }
+    table.ui-table-reflow .ui-table-cell-label {
+      padding: .4em;
+      min-width: 30%;
+      display: inline-block;
+      margin: -.4em 1em -.4em -.4em;
+    }
+  
+  } /* end media query */

@@ -5618,7 +5618,7 @@ jpegtran-bin@^3.0.0:
     bin-wrapper "^3.0.0"
     logalot "^2.0.0"
 
-jquery@^3.3.1:
+jquery@>=1.2.6, jquery@^3.3.1:
   version "3.6.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.6.0.tgz#c72a09f15c1bdce142f49dbf1170bdf8adac2470"
   integrity sha512-JVzAR/AjBvVt2BmYhxRCSYysDsPcssdmTFnzyLEts9qNwmjmu4JTAMYubEfwVOSwpQ1I1sKKFcxhZCI2buerfw==
@@ -10007,6 +10007,13 @@ table@^4.0.1:
     lodash "^4.17.4"
     slice-ansi "1.0.0"
     string-width "^2.1.1"
+
+tablesorter@^2.31.3:
+  version "2.31.3"
+  resolved "https://registry.yarnpkg.com/tablesorter/-/tablesorter-2.31.3.tgz#94c33234ba0e5d9efc5ba4e48651010a396c8b64"
+  integrity sha512-ueEzeKiMajDcCWnUoT1dOeNEaS1OmPh9+8J0O2Sjp3TTijMygH74EA9QNJiNkLJqULyNU0RhbKY26UMUq9iurA==
+  dependencies:
+    jquery ">=1.2.6"
 
 tapable@^0.2.7:
   version "0.2.9"
