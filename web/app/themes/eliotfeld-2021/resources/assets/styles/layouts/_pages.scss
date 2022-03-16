@@ -37,6 +37,17 @@
     footer.content-info{
         padding: 0;
     }
+
+    .copyright{
+        position: fixed;
+        bottom: 5px;
+        right: 10px;
+        text-align: right;
+        font-size: .8em;
+        color: theme-color(white);
+        opacity: .5;
+        transform: rotateZ(90deg) translate(-50%, -80px);
+    }
 }
 
 .page.biography{
