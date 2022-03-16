@@ -50,12 +50,22 @@
         margin-bottom: $grid-gutter / 2;
     }
 
+    #generalSection{
+        position: sticky;
+        align-self: flex-start;
+        top: 80px;
+    }
+
     #balletHeader{
         display: flex;
+        position: sticky;
+        top: 0;
         align-items: flex-end;
         border-bottom: 1px solid theme-color(black);
         padding: 10px 0;
-        margin-bottom: $grid-gutter / 2;
+        margin-bottom: $grid-gutter;
+        background: theme-color(lightpink);
+        z-index: 2;
 
         h1{
             flex: 1;
@@ -76,11 +86,16 @@
     }
 
     .public-domain{
+        
         background: lighten(theme-color(beige), .1);
         padding: 10px;
 
         h3{
             margin-bottom: 10px;
         }
+    }
+
+    .mediaSection{
+        
     }
 }
