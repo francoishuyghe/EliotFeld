@@ -22,70 +22,70 @@ body{
 #balletsTable{
     font: inherit;
     background: transparent;
-}
 
-#balletsHeader{
-    position: sticky;
-    top: 0;
-    background: theme-color(lightpink);
-    z-index: 3;
-    padding: $grid-gutter / 2 0;
-    text-transform: uppercase;
+    #balletsHeader{
+        position: sticky;
+        top: 0;
+        background: theme-color(lightpink);
+        z-index: 3;
+        padding: $grid-gutter / 2 0;
+        text-transform: uppercase;
+        
+        th{
+            background: transparent;
+        }
     
-    th{
-        background: transparent;
-    }
-
-    .sort{
-        cursor: pointer;
-        white-space: nowrap;
-    }
-
-    @include media-breakpoint-down(md){
-        .header-year,
-        .header-composer,
-        .header-copyright{
-            display: none;
+        .sort{
+            cursor: pointer;
+            white-space: nowrap;
+        }
+    
+        @include media-breakpoint-down(md){
+            .header-year,
+            .header-composer,
+            .header-copyright{
+                display: none;
+            }
         }
     }
-}
-
-.ballet{
-    align-items: center;
     
-    td{
-        padding: 10px 0;
-        border-bottom: 1px solid theme-color(black);
-        background: transparent;
-    }
-
-    &:hover{
-        background-color: darken(theme-color(lightpink), 2);
-    }
-
-    &:last-child{
-        border-bottom: 0;
-        margin-bottom: $grid-gutter;
-    }
-
-    .ballet-name{
-        font-family: 'CardinalFruit', serif;
-        font-size: 3em;
-
-        a{
-            color: theme-color(black);
+    .ballet{
+        align-items: center;
+        
+        td{
+            padding: 10px 0;
+            border-bottom: 1px solid theme-color(black);
+            background: transparent;
         }
-    }
-
-    .ballet-copyright span{
-        display: none;
-    }
-
-    @include media-breakpoint-down(md){
-        .ballet-year,
-        .ballet-composer,
-        .ballet-copyright{
+    
+        &:hover{
+            background-color: darken(theme-color(lightpink), 2);
+        }
+    
+        &:last-child{
+            border-bottom: 0;
+            margin-bottom: $grid-gutter;
+        }
+    
+        .ballet-name{
+            font-family: 'CardinalFruit', serif;
+            font-size: 3em;
+    
+            a{
+                color: theme-color(black);
+            }
+        }
+    
+        .ballet-copyright span{
             display: none;
+        }
+    
+        @include media-breakpoint-down(md){
+            .ballet-year,
+            .ballet-composer,
+            .ballet-copyright{
+                display: none;
+            }
         }
     }
 }
