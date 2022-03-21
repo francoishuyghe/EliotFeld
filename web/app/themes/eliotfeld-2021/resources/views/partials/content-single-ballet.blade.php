@@ -43,10 +43,20 @@
       {{-- MUSIC --}}
       <section id="musicSection">
         <h2>Music</h2>
-        @if( $music['composer'])<h3>Composer</h3>
-        <p><a href="{{ the_permalink($music['composer']) }}">
+        @if( $music['composer'])
+        <h3>Composer</h3>
+        <p>
+          @if($music['composer']->ID !== 874)
+            <a href="{{ the_permalink($music['composer']) }}">
+          @endif
+          
           {{ get_the_title($music['composer']) }}
-        </a></p>@endif
+
+          @if($music['composer']->ID !== 874)
+            </a>
+          @endif
+        </p>
+        @endif
 
         @if( $music['music_notes'])<h3>Composition</h3> {!! $music['composition'] !!} @endif
         @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
