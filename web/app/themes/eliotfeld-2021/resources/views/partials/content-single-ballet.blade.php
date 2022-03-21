@@ -12,6 +12,7 @@
 
   <div class="row">
       <section class="col-md-4" id="generalSection">
+        <h2>Creative Team</h2>
         <p><h3>Choreographer</h3><p>Eliot Feld</p>
         @if($data['lighting_designer'])
           <h3>Lighting Designer</h3>

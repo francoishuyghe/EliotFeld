@@ -54,6 +54,8 @@
         position: sticky;
         align-self: flex-start;
         top: 80px;
+        padding-top: $grid-gutter / 2;
+        margin-top: -$grid-gutter / 2;
     }
 
     #balletHeader{
@@ -81,6 +83,11 @@
 
             &.columned{
                 columns: 2;
+            }
+
+            li{
+                padding-left: .5em;
+                text-indent:-.5em;
             }
         }
     }
