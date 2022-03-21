@@ -116,7 +116,9 @@
       <div class="row">
         @foreach ($media['videos'] as $video)
           <div class="col-md-6">
-              {!! $video['video'] !!}
+            @if ($video['thumbnail'])
+              <img src="{{ $video['thumbnail']['sizes']['medium']}}" />
+            @endif
           </div>
         @endforeach
       </div>

@@ -41,7 +41,7 @@
       "type": "package",
       "package": {
         "name": "advanced-custom-fields/advanced-custom-fields-pro",
-        "version": "5.9.6",
+        "version": "5.12",
         "type": "wordpress-plugin",
         "dist": {
           "type": "zip",
@@ -61,19 +61,14 @@
     "oscarotero/env": "^2.1",
     "roots/bedrock-autoloader": "^1.0",
     "roots/bedrock-disallow-indexing": "^2.0",
-    "roots/wordpress": "5.8",
+    "roots/wordpress": "5.9.2",
     "roots/wp-config": "1.0.0",
     "roots/wp-password-bcrypt": "1.0.0",
-    "deliciousbrains-plugin/wp-migrate-db-pro": "2.0.2",
-    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.0.1",
-    "wpackagist-plugin/advanced-custom-fields": "^5.9.6",
-    "advanced-custom-fields/advanced-custom-fields-pro": "^5.9.6",
+    "deliciousbrains-plugin/wp-migrate-db-pro": "2.2.2",
+    "deliciousbrains-plugin/wp-migrate-db-pro-media-files": "^2.1.0",
+    "advanced-custom-fields/advanced-custom-fields-pro": "^5.12",
     "wpackagist-plugin/wp-fastest-cache": "^0.9.0.9",
-    "wpackagist-plugin/wordpress-seo":"^16.2",
-    "wpackagist-plugin/ajax-load-more":"5.4.5",
-    "13milliseconds/ajax-load-more-pro": "dev-master",
-    "wpackagist-plugin/the-events-calendar":"5.7.0",
-    "wpackagist-plugin/add-search-to-menu":"4.6.4",
+    "wpackagist-plugin/wordpress-seo":"^18.3",
     "wpackagist-plugin/simple-custom-post-order":"2.5.6"
   },
   "require-dev": {
