@@ -2,7 +2,6 @@
         <thead>
     <tr id="balletsHeader">
             <th class="sort header-name col">Ballets</th>
-            <th class="sort header-copyright col-md-1">Public Domain</th>
             <th class="sort header-year col-md-1">Year</th>
             <th class="sort header-composer col-md-2">Composer</th>
     </tr>
@@ -14,14 +13,6 @@
                 <a href="{{ get_permalink($ballet->ID) }}">
                     {{ $ballet->post_title }}
                 </a>
-            </td>
-            <td class="ballet-copyright">
-                @if(in_category('cat-2', $ballet->ID))
-              <span>1</span>
-              <i class="fab fa-creative-commons-pd"></i>
-              @else
-              <span>0</span>
-              @endif
             </td>
             <td class="ballet-year">
                 @php $generalInfo = get_field('general_info', $ballet->ID) @endphp
