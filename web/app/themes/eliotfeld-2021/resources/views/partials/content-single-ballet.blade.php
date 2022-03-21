@@ -58,7 +58,7 @@
         </p>
         @endif
 
-        @if( $music['music_notes'])<h3>Composition</h3> {!! $music['composition'] !!} @endif
+        @if( $music['composition'])<h3>Composition</h3> {!! $music['composition'] !!} @endif
         @if( $music['music_notes'])<h3>Notes</h3> {!! $music['music_notes'] !!} @endif
       </section>
     </div>
