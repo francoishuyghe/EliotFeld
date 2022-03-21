@@ -21,11 +21,14 @@ class SinglePeople extends Controller
             $data = [];
             $post = get_post();
 
+            $music = get_field('music', $ballet);
+
             $data['general_info'] = get_field('general_info', $ballet);
             $data['lighting_designer'] = get_field('lighting_designer', $ballet);
             $data['costume_designer'] = get_field('costume_designer', $ballet);
             $data['set_designer'] = get_field('set_designer', $ballet);
             $data['premiere'] = get_field('premiere', $ballet);
+            $data['composer'] = $music ? $music['composer'] : '';
 
             if(in_array($post, $data)){
                 $ballets[] = $ballet;
