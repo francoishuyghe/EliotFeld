@@ -26,7 +26,7 @@
                     @if(count($music['composer']) > 1)
                         Various
                     @else    
-                        {{ get_the_title($music['composer']) }}
+                        {{ get_the_title($music['composer'][0]) }}
                     @endif
                 @endif
             </td>
