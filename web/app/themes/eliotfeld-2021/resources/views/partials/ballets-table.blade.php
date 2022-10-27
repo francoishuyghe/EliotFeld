@@ -23,8 +23,8 @@
             <td class="ballet-composer">
                 @php $music = get_field('music', $ballet->ID) @endphp
                 @if($music)
-                    @if($music['composer'])
-                        {{ get_the_title($music['composer']) }}
+                    @if($music['composer'][0])
+                        {{ get_the_title($music['composer'][0]) }}
                     @endif
                 @endif
             </td>
