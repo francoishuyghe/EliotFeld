@@ -16,21 +16,42 @@
         <p><h3>Choreographer</h3><p>Eliot Feld</p>
         @if($data['lighting_designer'])
           <h3>Lighting Designer</h3>
-          <p><a href="{{ the_permalink($data['lighting_designer']) }}">
-            {!! get_the_title($data['lighting_designer']) !!}
-          </a></p>@endif
+          <ul>
+          @foreach ($data['lighting_designer'] as $lighting_designer)
+          <li>
+            <a href="{{ the_permalink($lighting_designer) }}">
+            {!! get_the_title($lighting_designer) !!}
+          </a>
+        </li>
+          @endforeach
+      </ul>
+          @endif
 
         @if($data['costume_designer'])
         <h3>Costume Designer</h3>
-        <p><a href="{{ the_permalink($data['costume_designer']) }}">
-          {!! get_the_title($data['costume_designer']) !!}
-        </a></p>@endif
+        <ul>
+          @foreach ($data['costume_designer'] as $costume_designer)
+          <li>
+            <a href="{{ the_permalink($costume_designer) }}">
+            {!! get_the_title($costume_designer) !!}
+          </a>
+        </li>
+          @endforeach
+      </ul>
+        @endif
 
         @if($data['set_designer'])
         <h3>Set Designer</h3>
-        <p><a href="{{ the_permalink($data['set_designer']) }}">
-          {!! get_the_title($data['set_designer']) !!}
-        </a></p>@endif
+        <ul>
+          @foreach ($data['set_designer'] as $set_designer)
+          <li>
+            <a href="{{ the_permalink($set_designer) }}">
+            {!! get_the_title($set_designer) !!}
+          </a>
+        </li>
+          @endforeach
+      </ul>
+      @endif
 
         @if( $general_info['running_time']) 
           <h3>Running Time</h3>
@@ -46,17 +67,19 @@
         <h2>Music</h2>
         @if( $music['composer'])
         <h3>Composer</h3>
+        @foreach ($music['composer'] as $composer)    
         <p>
-          @if($music['composer']->ID !== 874)
-            <a href="{{ the_permalink($music['composer']) }}">
+          @if($composer->ID !== 874)
+            <a href="{{ the_permalink($composer) }}">
           @endif
           
-          {{ get_the_title($music['composer']) }}
+          {{ get_the_title($composer) }}
 
-          @if($music['composer']->ID !== 874)
+          @if($composer->ID !== 874)
             </a>
           @endif
         </p>
+        @endforeach
         @endif
 
         @if( $music['composition'])<h3>Composition</h3> {!! $music['composition'] !!} @endif

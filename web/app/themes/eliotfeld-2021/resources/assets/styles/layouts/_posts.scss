@@ -21,6 +21,15 @@
         margin-bottom: 10px;
     }
 
+    ul{
+        padding-left: 0;
+        list-style: none;
+
+        li{
+            padding-left: 0;
+        }
+    }
+
     .back-button{
         color: theme-color(black);
         text-transform: uppercase;
