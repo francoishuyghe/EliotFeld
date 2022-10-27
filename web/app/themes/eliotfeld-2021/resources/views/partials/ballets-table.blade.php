@@ -23,8 +23,10 @@
             <td class="ballet-composer">
                 @php $music = get_field('music', $ballet->ID) @endphp
                 @if($music)
-                    @if($music['composer'][0])
-                        {{ get_the_title($music['composer'][0]) }}
+                    @if(count($music['composer']) > 1)
+                        Various
+                    @else    
+                        {{ get_the_title($music['composer']) }}
                     @endif
                 @endif
             </td>
