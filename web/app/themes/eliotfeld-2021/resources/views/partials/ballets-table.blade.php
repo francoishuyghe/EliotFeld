@@ -14,7 +14,7 @@
                     {{ $ballet->post_title }}
                 </a>
             </td>
-            <td class="ballet-year">
+            <td class="ballet-year" @if($ballet->post_title == 'Harbinger') data-text="1" @endif>
                 @php $generalInfo = get_field('general_info', $ballet->ID) @endphp
                 @if($generalInfo)
                 {{ $generalInfo['year'] }}

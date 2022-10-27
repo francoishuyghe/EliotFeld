@@ -51,11 +51,15 @@
     }
 
     #generalSection{
-        position: sticky;
-        align-self: flex-start;
-        top: 80px;
-        padding-top: $grid-gutter / 2;
-        margin-top: -$grid-gutter / 2;
+        
+
+        @include media-breakpoint-up(md){
+            position: sticky;
+            align-self: flex-start;
+            top: 80px;
+            padding-top: $grid-gutter / 2;
+            margin-top: -$grid-gutter / 2;    
+        }
     }
 
     #balletHeader{

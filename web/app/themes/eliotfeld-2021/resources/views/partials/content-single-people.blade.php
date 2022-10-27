@@ -9,8 +9,13 @@
   </div>
 
   @if (count($ballets) > 0)
-    <section id="ballets">
+  <section id="ballets">
+      
+      @if(has_term('composer', 'position'))
+      <p>{!! get_the_title() !!}'s music was used for:</p>
+      @else
       <p>{!! get_the_title() !!} has worked on:</p>
+      @endif
       @include('partials.ballets-table')
     </section>
   @endif

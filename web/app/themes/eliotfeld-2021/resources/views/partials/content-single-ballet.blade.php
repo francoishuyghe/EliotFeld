@@ -86,13 +86,6 @@
       </section>
     </div>
 
-    {{-- Notes --}}
-      @if($data['notes'])
-      <section class="col-md-12" id="notesSection">
-        <h2>Credits & Notes</h2>
-        {!! $data['notes'] !!}
-      </section>
-      @endif
     
     {{-- Media --}}
     @php $media = $data['media'] @endphp
@@ -137,6 +130,15 @@
 
     </div>
   </div>
+
+     {{-- Notes --}}
+     @if($data['notes'])
+     <section class="col-md-12" id="notesSection">
+       <h2>Credits & Notes</h2>
+       {!! $data['notes'] !!}
+     </section>
+     @endif
+     
 </div>
     
   
