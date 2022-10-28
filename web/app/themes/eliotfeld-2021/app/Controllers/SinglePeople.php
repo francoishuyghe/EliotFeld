@@ -23,12 +23,16 @@ class SinglePeople extends Controller
 
             $music = get_field('music', $ballet);
 
-            $data['general_info'] = get_field('general_info', $ballet);
-            $data['lighting_designer'] = get_field('lighting_designer', $ballet);
-            $data['costume_designer'] = get_field('costume_designer', $ballet);
-            $data['set_designer'] = get_field('set_designer', $ballet);
+            //$data['general_info'] = get_field('general_info', $ballet);
+            if(get_field('lighting_designer', $ballet)) $data = array_merge($data, get_field('lighting_designer', $ballet));
+            if(get_field('costume_designer', $ballet)) $data = array_merge($data, get_field('costume_designer', $ballet));
+            if(get_field('set_designer', $ballet)) $data = array_merge($data, get_field('set_designer', $ballet));
+
+            if($music['composer']){
+                $data = array_merge($data, $music['composer']);
+            }
+
             $data['premiere'] = get_field('premiere', $ballet);
-            $data['composer'] = $music ? $music['composer'] : '';
 
             if(in_array($post, $data)){
                 $ballets[] = $ballet;
