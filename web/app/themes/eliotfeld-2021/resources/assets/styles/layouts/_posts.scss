@@ -106,7 +106,6 @@
     }
 
     .public-domain{
-        
         background: lighten(theme-color(beige), .1);
         padding: 10px;
 
@@ -115,7 +114,32 @@
         }
     }
 
-    .mediaSection{
-        
+    .mediaSection img{
+        cursor: pointer;
+    }
+
+    #contact{
+        display: none;
+        position: fixed;
+        background: rgba(0,0,0,.8);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .inner{
+            padding: $grid-gutter;
+            max-width: 100%;
+            width: 600px;
+            background-color: theme-color(beige);
+
+            a{
+                text-decoration: underline;
+            }
+        }
     }
 }

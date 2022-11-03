@@ -12,17 +12,31 @@
   }
 
   a.brand{
-    margin-right: $grid-gutter / 2;
+    font-size: 1.5em;
+    
+    @include media-breakpoint-up(md){
+      font-size: 1em;
+      margin-right: $grid-gutter / 2;
+    }
   }
 
   .container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     padding: $grid-gutter / 3 0;
+    
+    @include media-breakpoint-up(md){
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 
   .nav{
+    @include media-breakpoint-down(sm){
+      justify-content: center;
+    }
+
     li {
       @extend .nav-item;
     }

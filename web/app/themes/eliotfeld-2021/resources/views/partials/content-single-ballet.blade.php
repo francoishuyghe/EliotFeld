@@ -116,6 +116,15 @@
     <section class="col-12 mediaSection">
       <h2>Media</h2>
 
+      {{-- Public Domain Notice --}}
+    @if(in_category('cat-2'))
+    <section class="col-md-12 public-domain">
+      <h3><i class="fal fa-info-circle"></i> Copyright Notice</h3>
+      <p>The choreography for {!! get_the_title() !!} is in the public domain. If you are interested in viewing the full-length video(s), either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request. Access may be requested by clicking on the thumbnail(s) below.</p>
+      <p>Should you wish to publicly stage the ballet, please note that there are third party rights to be cleared if you wish to use elements of the ballet in addition to the choreography.</p>
+    </section>
+    @endif
+
       {{-- Photos --}}
       @if( $media['photos'] )
         <div class="row">
@@ -126,6 +135,14 @@
           @endforeach
         </div>
       @endif
+
+      {{-- Contact form --}}
+      <section id="contact">
+        <div class="inner">
+            <p>For access to this video, please email <a href="mailto:feldrights@ballettech.org?subject={!! get_the_title() !!} video request" target="_blank">feldrights@ballettech.org</a> and briefly introduce yourself and why you are requesting access.</p>
+            <p>Access will allow for viewing via streaming, but the videos may not be copied or downloaded.</p>
+        </div>
+      </section>
 
       {{-- Videos --}}
       @if( $media['videos'] )
@@ -142,25 +159,18 @@
     </section>
     @endif
 
-    {{-- Public Domain Notice --}}
-    @if(in_category('cat-2'))
-    <section class="col-md-12 public-domain">
-      <h3><i class="fal fa-info-circle"></i> Copyright Notice</h3>
-      <p>The choreography for {!! get_the_title() !!} is in the public domain. If you are interested in viewing the full length video, either for research purposes or for the purpose of staging the ballet, access to full length video(s) may be obtained by request.</p>
-      <p>Please note that there are third party rights to be cleared before any public staging of the ballet.</p>
+    {{-- Notes --}}
+    @if($data['notes'])
+    <section class="col-md-12" id="notesSection">
+      <h2>Credits & Notes</h2>
+      {!! $data['notes'] !!}
     </section>
     @endif
 
+    
     </div>
   </div>
 
-     {{-- Notes --}}
-     @if($data['notes'])
-     <section class="col-md-12" id="notesSection">
-       <h2>Credits & Notes</h2>
-       {!! $data['notes'] !!}
-     </section>
-     @endif
      
 </div>
     

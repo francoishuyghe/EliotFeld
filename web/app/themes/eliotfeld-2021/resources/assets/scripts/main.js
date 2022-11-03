@@ -11,6 +11,7 @@ import home from './routes/home';
 import aboutUs from './routes/about';
 import ballets from './routes/ballets';
 import singlePeople from './routes/singlePeople';
+import singleBallet from './routes/singleBallet';
 
 /** Populate Router instance with DOM routes */
 const routes = new Router({
@@ -22,6 +23,7 @@ const routes = new Router({
   aboutUs,
   ballets,
   singlePeople,
+  singleBallet,
 });
 
 // Load Events

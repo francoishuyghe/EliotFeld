@@ -14,7 +14,7 @@
       @if(has_term('composer', 'position'))
       <p>{!! get_the_title() !!}'s music was used for:</p>
       @else
-      <p>{!! get_the_title() !!} has worked on:</p>
+      <p>{!! get_the_title() !!} was part of the premiere production of the following ballet(s):</p>
       @endif
       @include('partials.ballets-table')
     </section>
