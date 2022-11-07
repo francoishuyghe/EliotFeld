@@ -27,6 +27,14 @@ body{
     a{
         color: inherit;
     }
+
+    .wp-block-image{
+        figcaption{
+            text-align: right;
+            font-size: .8em;
+            opacity: .8;
+        }
+    }
 }
 
 #balletsTable{
