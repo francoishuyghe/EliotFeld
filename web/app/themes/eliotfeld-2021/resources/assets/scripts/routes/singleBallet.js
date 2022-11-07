@@ -6,11 +6,11 @@ export default {
         return;
       }
 
-      $(this).hide();
+      document.getElementById('contact').style.display = 'none';
     })
-
+    
     $('.mediaSection img').on('click', function () {
-      $('#contact').show();
+      document.getElementById('contact').style.display = 'flex';
     });
 
   },
