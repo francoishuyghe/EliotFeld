@@ -11,10 +11,12 @@
     line-height: 0.65em;
   }
 
-  .wrap {
+  #app {
     display: flex;
-    justify-content: center;
-    align-items: flex-end;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: column;
+    height: 100vh;
   }
 
   header .nav a {
@@ -22,6 +24,10 @@
   }
 
   header .brand {
+    display: none;
+  }
+
+  footer {
     display: none;
   }
 
