@@ -1,0 +1,48 @@
+.banner {
+  font-family: 'CardinalFruit', serif;
+  text-transform: uppercase;
+  font-size: 1.2em;
+
+  @include media-breakpoint-up(md) {
+    font-size: 1.7em;
+  }
+
+  a {
+    color: var(--black);
+  }
+
+  a.brand {
+    font-size: 1.5em;
+
+    @include media-breakpoint-up(md) {
+      font-size: 1em;
+      margin-right: $grid-gutter / 2;
+    }
+  }
+
+  .container {
+    text-align: center;
+    padding: $grid-gutter / 3 0;
+
+    @include media-breakpoint-up(md) {
+      text-align: left;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  .nav {
+    @include media-breakpoint-down(sm) {
+      justify-content: center;
+    }
+
+    li {
+      @extend .nav-item;
+    }
+
+    a {
+      @extend .nav-link;
+    }
+  }
+}
