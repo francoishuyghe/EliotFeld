@@ -11,6 +11,9 @@ $grid-gutter: 50px;
   --lightpink: #f7f6f6;
   --beige: #d8d8d8;
   --green: #606d6c;
+
+  --font-cardinalfruit: 'CardinalFruit', serif;
+  --font-inter: 'Inter', sans-serif;
 }
 
 /** Bootstrap navbar fix (https://git.io/fADqW) */
@@ -36,8 +39,8 @@ $navbar-light-toggler-icon-bg: none;
 
 @font-face {
   font-family: 'CardinalFruit';
-  src: url('~@fonts/CardinalFruit-Medium.woff2') format('woff2'),
-    url('~@fonts/CardinalFruit-Medium.woff') format('woff');
+  src: url('~@fonts/CardinalFruitWeb-Medium.woff2') format('woff2'),
+    url('~@fonts/CardinalFruitWeb-Medium.woff') format('woff');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

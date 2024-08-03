@@ -4,14 +4,14 @@ body {
   flex-flow: column;
   background-color: var(--lightpink);
   font-weight: 300;
-  font-family: 'Inter', 'CardinalFruit', sans-serif;
+  font-family: var(--font-inter);
 
   .wrap {
     flex: 1;
   }
 
   h1 {
-    font-family: 'CardinalFruit', sans-serif;
+    font-family: var(--font-cardinalfruit);
   }
 
   h3 {
@@ -86,11 +86,16 @@ body {
     }
 
     .ballet-name {
-      font-family: 'CardinalFruit', serif;
+      font-family: var(--font-cardinalfruit);
       font-size: 3em;
 
       a {
         color: var(--black);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
 

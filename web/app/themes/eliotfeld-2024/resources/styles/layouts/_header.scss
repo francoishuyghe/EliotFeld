@@ -1,15 +1,18 @@
 .banner {
-  font-family: 'CardinalFruit', serif;
+  .nav {
+    --bs-nav-link-color: var(--black);
+    --bs-link-hover-color: var(--black);
+    --bs-nav-link-font-size: 1.2em;
+
+    @include media-breakpoint-up(md) {
+      --bs-nav-link-font-size: 1.7em;
+    }
+  }
+
+  font-family: var(--font-cardinalfruit);
   text-transform: uppercase;
-  font-size: 1.2em;
-
-  @include media-breakpoint-up(md) {
-    font-size: 1.7em;
-  }
-
-  a {
-    color: var(--black);
-  }
+  position: relative;
+  z-index: 9;
 
   a.brand {
     font-size: 1.5em;
