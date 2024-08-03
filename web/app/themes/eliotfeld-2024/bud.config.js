@@ -37,6 +37,10 @@ export default async (app) => {
     .setProxyUrl('http://eliotfeld.ballettech.test')
     .watch(['resources/views', 'app']);
 
+  app.provide({
+    jquery: ['jQuery', '$'],
+  });
+
   /**
    * Generate WordPress `theme.json`
    *
@@ -74,5 +78,5 @@ export default async (app) => {
         customFontSize: false,
       },
     })
-    .enable()
+    .enable();
 };

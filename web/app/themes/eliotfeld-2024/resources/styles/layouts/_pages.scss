@@ -17,12 +17,12 @@
     align-items: flex-end;
   }
 
-  header a {
+  header .nav a {
     color: var(--white);
+  }
 
-    &.brand {
-      display: none;
-    }
+  header .brand {
+    display: none;
   }
 
   img.eliot-cutout {
