@@ -1,0 +1,143 @@
+.page-template-template-ballet-category,
+.single-ballet {
+  article {
+    padding-top: $grid-gutter;
+  }
+
+  h2 {
+    font-size: 1em;
+    text-transform: uppercase;
+    text-decoration: underline;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-size: 1em;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+
+  p {
+    line-height: 1.3em;
+    margin-bottom: 10px;
+  }
+
+  ul {
+    padding-left: 0;
+    list-style: none;
+
+    li {
+      padding-left: 0;
+    }
+  }
+
+  .back-button {
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+
+    &:hover {
+      text-decoration: none;
+      &:before {
+        transform: translateX(-10px);
+      }
+    }
+
+    &:before {
+      content: '';
+      display: inline-block;
+      margin-right: 1em;
+      width: 0;
+      height: 0;
+      border-top: 0.4em solid transparent;
+      border-bottom: 0.4em solid transparent;
+      border-right: 0.6em solid var(--black);
+      transition: 0.25s;
+    }
+  }
+
+  section {
+    margin-bottom: $grid-gutter / 2;
+  }
+
+  #generalSection {
+    @include media-breakpoint-up(md) {
+      position: sticky;
+      align-self: flex-start;
+      top: 80px;
+      padding-top: $grid-gutter / 2;
+      margin-top: -$grid-gutter / 2;
+    }
+  }
+
+  #balletHeader {
+    display: flex;
+    position: sticky;
+    top: 0;
+    align-items: flex-end;
+    border-bottom: 1px solid var(--black);
+    padding: 10px 0;
+    margin-bottom: $grid-gutter;
+    background: var(--lightpink);
+    z-index: 2;
+
+    h1 {
+      flex: 1;
+      margin: $grid-gutter / 2 0 0;
+      line-height: 0.8em;
+    }
+  }
+
+  #premiereSection {
+    #castList {
+      list-style: none;
+      padding-left: 0;
+
+      &.columned {
+        columns: 2;
+      }
+
+      li {
+        padding-left: 0.5em;
+        text-indent: -0.5em;
+      }
+    }
+  }
+
+  .public-domain {
+    background: lighten(#d8d8d8, 0.1);
+    padding: 10px;
+
+    h3 {
+      margin-bottom: 10px;
+    }
+  }
+
+  .mediaSection img {
+    cursor: pointer;
+  }
+
+  #contact {
+    display: none;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    align-items: center;
+    justify-content: center;
+
+    .inner {
+      padding: $grid-gutter;
+      max-width: 100%;
+      width: 600px;
+      background-color: var(--beige);
+
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}

@@ -1,0 +1,129 @@
+.page.home {
+  background-color: var(--green);
+  height: 100vh;
+  overflow: hidden;
+
+  h1 {
+    color: var(--white);
+    font-size: 300px;
+    text-align: center;
+    margin-bottom: 0;
+    line-height: 0.65em;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+  header .nav a {
+    color: var(--white);
+  }
+
+  header .brand {
+    display: none;
+  }
+
+  img.eliot-cutout {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translate(-50%, 10px);
+    max-height: 90vh;
+  }
+
+  footer.content-info {
+    padding: 0;
+  }
+
+  .copyright {
+    position: fixed;
+    bottom: 5px;
+    right: 10px;
+    text-align: right;
+    font-size: 0.8em;
+    color: var(--white);
+    opacity: 0.5;
+    transform: rotateZ(90deg) translate(-50%, -80px);
+  }
+}
+
+.page.biography {
+  h1 {
+    font-size: 5em;
+    margin-top: $grid-gutter;
+
+    @include media-breakpoint-up(md) {
+      margin-top: $grid-gutter * 2;
+    }
+  }
+
+  .main > div > p {
+    margin: $grid-gutter / 3 auto $grid-gutter;
+    max-width: 700px;
+    font-size: 1.2em;
+    line-height: 1.2em;
+
+    @include media-breakpoint-up(md) {
+      margin: $grid-gutter / 3 auto $grid-gutter * 2;
+    }
+  }
+}
+
+.toggle {
+  &.down:after {
+    content: '▼';
+  }
+  &.up:after {
+    content: '▲';
+  }
+}
+
+/* REQUIRED CSS: change your reflow breakpoint here (35em below) */
+@media (max-width: 35em) {
+  /* uncomment out the line below if you don't want the sortable headers to show */
+  /* table.ui-table-reflow thead { display: none; } */
+
+  /* css for reflow & reflow2 widgets */
+  .ui-table-reflow td,
+  .ui-table-reflow th {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    float: right;
+    /* if not using the stickyHeaders widget (not the css3 version)
+       * the "!important" flag, and "height: auto" can be removed */
+    width: 100% !important;
+    height: auto !important;
+  }
+
+  /* reflow widget only */
+  .ui-table-reflow tbody td[data-title]:before {
+    color: #469;
+    font-size: 0.9em;
+    content: attr(data-title);
+    float: left;
+    width: 50%;
+    white-space: pre-wrap;
+    text-align: bottom;
+    display: inline-block;
+  }
+
+  /* reflow2 widget only */
+  table.ui-table-reflow .ui-table-cell-label.ui-table-cell-label-top {
+    display: block;
+    padding: 0.4em 0;
+    margin: 0.4em 0;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+  }
+  table.ui-table-reflow .ui-table-cell-label {
+    padding: 0.4em;
+    min-width: 30%;
+    display: inline-block;
+    margin: -0.4em 1em -0.4em -0.4em;
+  }
+} /* end media query */

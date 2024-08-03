@@ -1,0 +1,114 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column;
+  background-color: var(--lightpink);
+  font-weight: 300;
+  font-family: var(--font-inter);
+
+  .wrap {
+    flex: 1;
+  }
+
+  h1 {
+    font-family: var(--font-cardinalfruit);
+  }
+
+  h3 {
+    font-size: 1.2em;
+    font-weight: 400;
+  }
+
+  h4 {
+    font-size: 1.4em;
+    font-weight: 400;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  .wp-block-image {
+    figcaption {
+      text-align: right;
+      font-size: 0.8em;
+      opacity: 0.8;
+    }
+  }
+}
+
+#balletsTable {
+  font: inherit;
+  background: transparent;
+
+  #balletsHeader {
+    position: sticky;
+    top: 0;
+    background: var(--lightpink);
+    z-index: 3;
+    padding: $grid-gutter / 2 0;
+    text-transform: uppercase;
+
+    th {
+      background: transparent;
+    }
+
+    .sort {
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    @include media-breakpoint-down(md) {
+      .header-year,
+      .header-composer,
+      .header-copyright {
+        display: none;
+      }
+    }
+  }
+
+  .ballet {
+    align-items: center;
+
+    td {
+      padding: 10px 0;
+      border-bottom: 1px solid var(--black);
+      background: transparent;
+    }
+
+    &:hover {
+      background-color: darken(#f7f6f6, 2);
+    }
+
+    &:last-child {
+      border-bottom: 0;
+      margin-bottom: $grid-gutter;
+    }
+
+    .ballet-name {
+      font-family: var(--font-cardinalfruit);
+      font-size: 3em;
+
+      a {
+        color: var(--black);
+        text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    .ballet-copyright span {
+      display: none;
+    }
+
+    @include media-breakpoint-down(md) {
+      .ballet-year,
+      .ballet-composer,
+      .ballet-copyright {
+        display: none;
+      }
+    }
+  }
+}

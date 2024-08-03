@@ -1,0 +1,47 @@
+/** Import Bootstrap functions */
+@import '~bootstrap/scss/functions';
+
+$grid-gutter: 50px;
+
+:root {
+  --primary: #525ddc;
+  --black: #000000;
+  --white: #ffffff;
+  --grey: #cccccc;
+  --lightpink: #f7f6f6;
+  --beige: #d8d8d8;
+  --green: #606d6c;
+
+  --font-cardinalfruit: 'CardinalFruit', serif;
+  --font-inter: 'Inter', sans-serif;
+}
+
+/** Bootstrap navbar fix (https://git.io/fADqW) */
+$navbar-dark-toggler-icon-bg: none;
+$navbar-light-toggler-icon-bg: none;
+
+@font-face {
+  font-family: 'Inter';
+  src: url('~@fonts//Inter-Light.woff2') format('woff2'),
+    url('~@fonts//Inter-Light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Inter';
+  src: url('~@fonts/Inter-Medium.woff2') format('woff2'),
+    url('~@fonts/Inter-Medium.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CardinalFruit';
+  src: url('~@fonts/CardinalFruitWeb-Medium.woff2') format('woff2'),
+    url('~@fonts/CardinalFruitWeb-Medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
